@@ -1,0 +1,1 @@
+document.querySelector(".is-logged-btn-for-profile").textContent = "Giriş yap!"
