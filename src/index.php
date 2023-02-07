@@ -1,27 +1,18 @@
 <?php
-$title = "Main page | Yigit's blog";
-include "db.php";
-
+session_start();
+$title = "Ana sayfa";
 $is_logged = true;
-include 'header.php';
+
+include "db.php";
+print_r($_SESSION);
+include "header.php";
+
 ?>
 
-<?php
-$msg = '';
-if (isset($_POST['login']) && !empty($_POST['username']) 
-  && !empty($_POST['password'])) {				
-  if ($_POST['username'] == 'admin' && 
-    $_POST['password'] == 'templekiller09') {
-    $_SESSION['valid'] = true;
-    $_SESSION['timeout'] = time();
-    $_SESSION['username'] = 'tutorialspoint';
-      echo 'You have entered valid use name and password';
-  }else {
-    $msg = 'Wrong username or password';
-  }
-}
-?>
+<center>
+Hello World!
+</center>
 
 <?php
-include 'footer.php';
+include "footer.php";
 ?>
